@@ -1,0 +1,6 @@
+---
+- hosts: "Windows"
+  gather_facts: "false"
+  roles:
+    - mdm
+...

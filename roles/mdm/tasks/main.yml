@@ -1,0 +1,17 @@
+---
+# - name: "Copy mdm Jboss software"
+#   win_copy: src=/home/remote/Downloads/mdm dest=C:/Users/Administrateur/temp/
+ 
+ - name: "Unzip MDM FILE"
+   script: unzip.ps1
+
+ - name: "replace line in file silent TIBCO HOME"
+   win_lineinfile: dest=C:/Users/Administrateur/temp/mdm/TIB_mdm-JBOSS_9.0.0_win_x86_64/TIBCOUniversalInstaller_cim-jboss_9.0.0.silent regexp='<entry key="environmentName">TIBCO_HOME</entry>' line='<entry key="environmentName">TIBCO_HOME_MDM</entry>'
+
+ - name: "replace"
+#   script: replaceline.ps1
+   win_lineinfile: dest=C:/Users/Administrateur/temp/mdm/TIB_mdm-JBOSS_9.0.0_win_x86_64/TIBCOUniversalInstaller_cim-jboss_9.0.0.silent  regexp='<entry key="environmentName">c:\tibco\thirdpartyDownload</entry>' line='<entry key="environmentName">c:\users\administrateur\temp\mdm</entry>'
+
+ - name: "replace line in file silent TIBCO Run as service"
+   win_lineinfile: dest=C:/Users/Administrateur/temp/mdm/TIB_mdm-JBOSS_9.0.0_win_x86_64/TIBCOUniversalInstaller_cim-jboss_9.0.0.silent regexp='<entry key="patterns.windows.service">false</entry>' line='<entry key="patterns.windows.service">true</entry>'
+...

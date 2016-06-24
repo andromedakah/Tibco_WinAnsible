@@ -1,0 +1,8 @@
+---
+- name: "Run powershell script"
+  hosts: "Windows"
+  gather_facts: "false"
+  tasks:
+    - name: "Start Windows Update"
+      script: "/etc/ansible/files/script1.ps1"
+...

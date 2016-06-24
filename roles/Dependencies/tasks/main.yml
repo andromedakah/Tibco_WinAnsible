@@ -1,0 +1,7 @@
+---
+ - name: "Copy winrm config file"
+   win_copy: src=/home/remote/Downloads/winrm_script.ps1 dest=C:/Users/Administrateur/temp/
+ 
+ - name: "Copy sql-server express for MDM"
+   win_copy: src=/home/remote/Downloads/SQLEXPR_x64_FRA.exe dest=C:/Users/Administrateur/temp/mdm
+...

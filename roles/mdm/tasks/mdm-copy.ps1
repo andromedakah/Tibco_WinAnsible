@@ -1,0 +1,1 @@
+cp C:\Users\Administrateur\temp\mdm\mdm-jboss\TIB_mdm-JBOSS_9.0.0_win_x86_64\TIBCOUniversalInstaller_cim-jboss_9.0.0.silent C:\Users\Administrateur\temp\mdm\mdm-jboss\TIB_mdm-JBOSS_9.0.0_win_x86_64\Installer.silent

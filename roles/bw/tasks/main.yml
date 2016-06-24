@@ -1,0 +1,10 @@
+---
+ - name: "add bw temp file"
+   win_file: path=C:/Users/Administrateur/temp/bw state=directory
+   
+ - name: "cp tea software"
+   win_copy: src=/home/remote/Downloads/TIB_BW_6.3.2_win_x86_64 dest=C:/Users/Administrateur/temp/bw
+
+ - name: "Copy silent file script"
+   script: "/etc/ansible/roles/bw/tasks/bw-script.ps1"
+...

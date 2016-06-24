@@ -1,0 +1,10 @@
+---
+ - name: "add tea temp file"
+   win_file: path=C:/Users/Administrateur/temp/tea state=directory
+   
+ - name: "cp tea software"
+   win_copy: src=/home/remote/Downloads/TIB_tea_2.2.0_win_x86_64 dest=C:/Users/Administrateur/temp/tea
+
+ - name: "Silent Installation"
+   script: "/etc/ansible/roles/tea/tasks/tea-script.ps1"
+...

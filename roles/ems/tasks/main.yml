@@ -1,0 +1,13 @@
+---
+ - name: "add temporary file"
+   win_file: path=C:/Users/Administrateur/temp state=directory
+
+ - name: "add ems temp file"
+   win_file: path=C:/Users/Administrateur/temp/ems state=directory
+   
+ - name: "cp ems zip file"
+   win_copy: src=/home/remote/Downloads/TIB_ems_8.3.0_win_x86_64_vc10 dest=C:/Users/Administrateur/temp/ems
+
+ - name: "Silent Installation"
+   script: "/etc/ansible/roles/ems/tasks/ems-script.ps1"
+...
